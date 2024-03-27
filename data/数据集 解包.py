@@ -25,7 +25,7 @@ def read_image(filename):
                 image1 = image.transpose(Image.FLIP_LEFT_RIGHT)
                 image2 = image1.rotate(90)
 
-                image2.save('train/' + str(i) + '.png')
+                image2.save('test/' + str(i) + '.png')
 
 
 # 标签：
@@ -57,9 +57,9 @@ def read_label(filename, saveFilename):
 
 
 if __name__ == '__main__':
-    imagePath = 'gzip/emnist-letters-train-images-idx3-ubyte'
-    labelPath = 'gzip/emnist-letters-train-labels-idx1-ubyte'
-    labelSavTransPath = 'train/label.txt'
+    imagePath = 'gzip/emnist-letters-test-images-idx3-ubyte'
+    labelPath = 'gzip/emnist-letters-test-labels-idx1-ubyte'
+    labelSavTransPath = 'test/label.txt'
 
     # 读取数据集：
     read_image(imagePath)
